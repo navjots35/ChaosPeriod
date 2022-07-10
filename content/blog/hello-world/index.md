@@ -1,231 +1,88 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+title: Getting Started with Vagrant.
+version: Part 1
+description: "Learn vagrant from scratch with all the in's and out's"
 ---
 
-This is my first post on my new fake blog! How exciting!
+Learning docker the right way could be much more fun and exciting. Docker is a runtime which allows engineers to abstract a layer of your application and packege it into a *container* to ship.
 
-I'm sure I'll write a lot more interesting things in the future.
+We'll learn each and every bit of it along the way.
+[Docker](https://imgs.search.brave.com/KLQtBHcge3DM6nyOJ_fYUhEC1GVMsNxdIbsKsVpmFcs/rs:fit:1200:992:1/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/bWF4LzI0ODAvMSo5/aEd2WUU1amVnSG0x/cl85N2dILWpRLnBu/Zw).
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](https://en.wikipedia.org/wiki/Salted_duck_egg).
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
 
-![Chinese Salty Egg](./salty_egg.jpg)
+Now, select the provider, which, in our case, is VirtualBox. After selecting the provider you'll notice that all boxes compatible with VirtualBox are listed below.
+You can choose any box you want; however, in this lesson, we'll be choosing 
+`ubuntu/xenial64`.
 
-You can also write code blocks here!
+## Run your virtual machine
+>From this point onwards, we will be looking into Ubuntu-based commands only. 
 
-```js
-const saltyDuckEgg = "chinese preserved food product"
+Open up your terminal and create your very first Vagrant VM.
+
+1. Create a Working Directory.
+```
+$ mkdir vagrant
 ```
 
-| Number | Title                                    | Year |
-| :----- | :--------------------------------------- | ---: |
-| 1      | Harry Potter and the Philosopher’s Stone | 2001 |
-| 2      | Harry Potter and the Chamber of Secrets  | 2002 |
-| 3      | Harry Potter and the Prisoner of Azkaban | 2004 |
 
-[View raw (TEST.md)](https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md)
-
-This is a paragraph.
-
-    This is a paragraph.
-
-# Header 1
-
-## Header 2
-
-    Header 1
-    ========
-
-    Header 2
-    --------
-
-# Header 1
-
-## Header 2
-
-### Header 3
-
-#### Header 4
-
-##### Header 5
-
-###### Header 6
-
-    # Header 1
-    ## Header 2
-    ### Header 3
-    #### Header 4
-    ##### Header 5
-    ###### Header 6
-
-# Header 1
-
-## Header 2
-
-### Header 3
-
-#### Header 4
-
-##### Header 5
-
-###### Header 6
-
-    # Header 1 #
-    ## Header 2 ##
-    ### Header 3 ###
-    #### Header 4 ####
-    ##### Header 5 #####
-    ###### Header 6 ######
-
-> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-    > Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-> ## This is a header.
->
-> 1. This is the first list item.
-> 2. This is the second list item.
->
-> Here's some example code:
->
->     Markdown.generate();
-
-    > ## This is a header.
-    > 1. This is the first list item.
-    > 2. This is the second list item.
-    >
-    > Here's some example code:
-    >
-    >     Markdown.generate();
-
-- Red
-- Green
-- Blue
-
-* Red
-* Green
-* Blue
-
-- Red
-- Green
-- Blue
-
-```markdown
-- Red
-- Green
-- Blue
-
-* Red
-* Green
-* Blue
-
-- Red
-- Green
-- Blue
+2. Move into the Directory.
 ```
-
-- `code goes` here in this line
-- **bold** goes here
-
-```markdown
-- `code goes` here in this line
-- **bold** goes here
+$ cd vagrant
 ```
-
-1. Buy flour and salt
-1. Mix together with water
-1. Bake
-
-```markdown
-1. Buy flour and salt
-1. Mix together with water
-1. Bake
+3. Now, initialize your Vagrant box.
 ```
-
-1. `code goes` here in this line
-1. **bold** goes here
-
-```markdown
-1. `code goes` here in this line
-1. **bold** goes here
+$ vagrant init ubuntu/xenial64
 ```
+`Output`
+```output
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+```
+4. Spin up your VM
+```
+$ vagrant up
+```
+`Output`
+```output
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'ubuntu/xenial64' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Loading metadata for box 'ubuntu/xenial64'
+    default: URL: https://vagrantcloud.com/ubuntu/xenial64
+==> default: Adding box 'ubuntu/xenial64' (v20200822.0.0) for provider: virtualbox
+    default: Downloading: https://vagrantcloud.com/ubuntu/boxes/xenial64/versions/20200822.0.0/providers/virtualbox.box
+    default: Download redirected to host: cloud-images.ubuntu.com
+``` 
 
-Paragraph:
+5. Do the SSH
+```
+$ vagrant ssh
+```
+`Output`
+```output
+Welcome to Ubuntu 16.04.7 LTS (GNU/Linux 4.4.0-187-generic x86_64)
 
-    Code
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
 
-<!-- -->
 
-    Paragraph:
+0 packages can be updated.
+0 updates are security updates.
 
-        Code
+New release '18.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
 
----
 
----
+vagrant@ubuntu-xenial:~$ 
 
----
+``` 
 
----
+If you're following along in the local environment, that's great!
 
----
 
-    * * *
-
-    ***
-
-    *****
-
-    - - -
-
-    ---------------------------------------
-
-This is [an example](http://example.com "Example") link.
-
-[This link](http://example.com) has no title attr.
-
-This is [an example][id] reference-style link.
-
-[id]: http://example.com "Optional Title"
-
-    This is [an example](http://example.com "Example") link.
-
-    [This link](http://example.com) has no title attr.
-
-    This is [an example] [id] reference-style link.
-
-    [id]: http://example.com "Optional Title"
-
-_single asterisks_
-
-_single underscores_
-
-**double asterisks**
-
-**double underscores**
-
-    *single asterisks*
-
-    _single underscores_
-
-    **double asterisks**
-
-    __double underscores__
-
-This paragraph has some `code` in it.
-
-    This paragraph has some `code` in it.
-
-![Alt Text](https://placehold.it/200x50 "Image Title")
-
-    ![Alt Text](https://placehold.it/200x50 "Image Title")
+Give it a go!
