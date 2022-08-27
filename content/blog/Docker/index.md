@@ -54,3 +54,58 @@ Let's first run hello world using docker and try implementing some command lines
 ```bash
 docker run hello-world
 ```
+
+This is the most basic fundamental command everyone tries out when working with docker for the first time. You'd get output something similar to what's shown below:
+```output
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete
+Digest: sha256:7d246653d0511db2a6b2e0436cfd0e52ac8c066000264b3ce63331ac66dca625
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+```
+
+Now, we know how to run a container let's do some deep dive and fast forward things!
+
+## What is a Dockerfile
+
+Dockerfile is a set of instructions on how to build a specific image. Now, this custom image building process is beneficial in many ways, for example, we've our custom set of variations to the image specific to the application that needs to be build. This Dockerfile image building process is crucial for that. Once, we've the image with us, we can use it again and again without rebuilding it. 
+
+These custom images are then pushed to a docker registry either private or public.
+
+### Building a Dockerfile
+
+1. Let's create a directory for building the image.
+```bash
+mkdir ~/docker-image
+```
+
+2. Changing into the directory
+```bash
+cd ~/docker-image
+```
+
+3. Let's get into the editor and start building an image
+```bash
+nano Dockerfile
+```
