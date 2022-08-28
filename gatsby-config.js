@@ -5,8 +5,8 @@ module.exports = {
       name: `Navjot Singh`,
       summary: `who lives and works in Toronto building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Cloud and all tech related mini gems`,
+    siteUrl: `https://chaosperiod.tech/`,
     social: {
       twitter: `navjotsin86`,
     },
