@@ -1,5 +1,5 @@
 ---
-title: Learn Docker the Hard Way.
+title: Docker - Part 1
 version: Part 1
 description: "Learn docker from scratch with all the in's and out's"
 ---
