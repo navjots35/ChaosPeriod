@@ -109,3 +109,39 @@ cd ~/docker-image
 ```bash
 nano Dockerfile
 ```
+
+4. Let's build a simple ubuntu image with custom utilities.
+```Dockerfile
+FROM ubuntu:latest
+
+RUN apt-get update -y && apt-get upgrade -y && apt-get install tree
+```
+
+5. Save the file and build the docker image.
+```bash
+docker build -t ubuntu:custom .
+```
+
+Now, we've built an image let's learn what we've done throughout the process.
+
+We can see the `Dockerfile` is named using a followed convention with a capital `D`
+
+```Dockerfile
+FROM ubuntu:latest
+
+RUN apt-get update -y && apt-get upgrade -y && apt-get install tree
+```
+The keywords such as `FROM`, `RUN` are specific to Dockerfile while building an image. These keywords needs to be understood before constructing a Dockerfile. There are many keywords that can be used while building the `Dockerfile` depends on the use-case from application to application.
+
+- `FROM` - Defines the base image to use for the build process.
+- `RUN` - The command triggers while we build the image, used in the image building process.
+- `CMD` - The command triggers when launching the created docker image.
+- `ENTRYPOINT` - Sets a default application to be used everytime a docker image is started.
+- `ENV` - Sets the Environment Variable
+- `LABEL` - adds labels to docker image, author specific.
+- `USER` - sets the UID or a default username to start the container.
+- `EXPOSE` - This is used to expose the default port on the container for traffic between container and the internet.
+
+These are some keywords that are used but not limited to.
+
+After saving the dockerfile, we need to build the file so that an image is created. To build an image, docker `build` command is used followed by the <image_name>:<tag> and location of the `Dockerfile`, in our case it's in the current directory so it's `.`
