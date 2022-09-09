@@ -8,7 +8,7 @@ module.exports = {
     description: `Cloud and all tech related mini gems`,
     siteUrl: `https://chaosperiod.tech/`,
     social: {
-      twitter: `navjotsin86`,
+      twitter: `navjots35`,
     },
   },
   plugins: [
@@ -51,12 +51,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-       resolve: `gatsby-plugin-google-analytics`,
-       options: {
-         trackingId: `G-LS6CG8NS0Y`,
-      },
-    },
+    //{
+      // resolve: `gatsby-plugin-google-analytics`,
+      // options: {
+     //    trackingId: `G-LS6CG8NS0Y`,
+      //},
+    //},
     {
       resolve: `gatsby-plugin-feed`,
       options: {
