@@ -144,4 +144,4 @@ The keywords such as `FROM`, `RUN` are specific to Dockerfile while building an 
 
 These are some keywords that are used but not limited to.
  
-After saving the dockerfile, we need to build the file so that an image is created. To build an image, docker `build` command is used followed by the <image_name> : <tag> and location of the `Dockerfile`, in our case it's in the current directory so it's `.`
+After saving the dockerfile, we need to build the file so that an image is created. To build an image, docker `build` command is used followed by the `<image_name> : <tag>` and location of the `Dockerfile`, in our case it's in the current directory so it's `.`

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `ChaosPeriod`,
+    title: `chaosperiod`,
     author: {
       name: `Navjot Singh`,
       summary: `who lives and works in Toronto building useful things.`,

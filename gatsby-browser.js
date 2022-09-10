@@ -1,3 +1,5 @@
+import "@fontsource/fira-code"
+import "@fontsource/inter"
 // custom typefaces
 import "typeface-montserrat"
 import "typeface-merriweather"
