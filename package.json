@@ -13,6 +13,8 @@
     "@fontsource/open-sans": "^4.5.11",
     "@fontsource/prata": "^4.5.10",
     "@fontsource/yeseva-one": "^4.5.10",
+    "@supabase/supabase-js": "^1.35.7",
+    "formik": "^2.2.9",
     "gatsby": "^4.18.0",
     "gatsby-plugin-feed": "^4.18.0",
     "gatsby-plugin-gatsby-cloud": "^4.18.0",
@@ -30,14 +32,17 @@
     "gatsby-remark-responsive-iframe": "^5.18.0",
     "gatsby-remark-smartypants": "^5.18.0",
     "gatsby-source-filesystem": "^4.18.0",
+    "gatsby-source-supabase": "^2.1.1",
     "gatsby-transformer-remark": "^5.18.0",
     "gatsby-transformer-sharp": "^4.18.0",
     "prismjs": "^1.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
+    "styled-components": "^5.3.9",
     "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "typeface-montserrat": "0.0.75",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "prettier": "^2.7.1"

@@ -1,0 +1,16 @@
+.contribute-button {
+    background-color: #0F62FE;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    box-shadow: 0px 2px 4px rgba(15, 98, 254, 0.24), 0px 4px 8px rgba(15, 98, 254, 0.24);
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .contribute-button:hover {
+    background-color: #0549A9;
+    box-shadow: 0px 4px 8px rgba(15, 98, 254, 0.4), 0px 8px 16px rgba(15, 98, 254, 0.4);
+  }

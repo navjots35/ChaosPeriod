@@ -13,6 +13,23 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-supabase`,
+      options: {
+        supabaseUrl: "https://whwmiwzaitmezgpfrvjf.supabase.co",
+        supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indod21pd3phaXRtZXpncGZydmpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzIxNzYwOTAsImV4cCI6MTk4Nzc1MjA5MH0.a6NwW0s9BpK_UHX0yWkxc_Pwv4alHUaBCERCiMlG26g",
+        types: [
+          {
+            type: "User",
+            query: (client) => client.from("users").select("*"), //sync or async
+          },
+          {
+            type: "Project",
+            query: (client) => client.from("projects").select("*"),
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
